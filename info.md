@@ -26,3 +26,7 @@ Clone or copy this repository and copy the folder `custom_components/polestar_en
 Once installed, configure via **Settings → Devices & services → Add integration → Polestar Energy**.
 
 Open the login link, sign in with your Polestar ID, then paste the `com.polestar.smartcharging://…` redirect URL back into Home Assistant.
+
+![Setup](images/setup.png)
+
+![Entities](images/result.png)
