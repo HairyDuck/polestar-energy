@@ -38,18 +38,24 @@ Use the same Polestar ID email and password you use in the Polestar Energy app (
 
 * HACS (Home Assistant Community Store) must be installed. If you have not installed HACS yet, follow the [official HACS installation guide](https://hacs.xyz/docs/use/#getting-started-with-hacs).
 
-## Add in HA Integration
+## Install with HACS
+
+Click the button to open this repository in HACS on your Home Assistant:
 
 [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=HairyDuck&repository=polestar-energy&category=integration)
 
-### Custom repository (until listed in HACS by default)
+1. Download **Polestar Energy** in HACS
+2. Restart Home Assistant
+3. Click below to add the integration (or use Settings → Devices & services → Add integration):
+
+[![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=polestar_energy)
+
+### Or add as a custom repository manually
 
 1. HACS → Integrations → ⋮ → **Custom repositories**
 2. Repository: `https://github.com/HairyDuck/polestar-energy`
 3. Category: **Integration**
-4. Download **Polestar Energy**
-5. Restart Home Assistant
-6. Settings → Devices & services → **Add integration** → **Polestar Energy**
+4. Download **Polestar Energy**, restart, then add the integration as above
 
 ### Fill the information
 

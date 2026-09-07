@@ -12,10 +12,15 @@ Not affiliated with Polestar or Jedlix. Complementary to [pypolestar/polestar_ap
 
 If you do not have HACS installed yet, visit https://hacs.xyz for installation instructions.
 
-1. In HACS go to **Integrations** → ⋮ → **Custom repositories**
-2. Add `https://github.com/HairyDuck/polestar-energy` as category **Integration**
-3. Search for **Polestar Energy** and download it
-4. Restart Home Assistant
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=HairyDuck&repository=polestar-energy&category=integration)
+
+1. Download **Polestar Energy** in HACS
+2. Restart Home Assistant
+3. Add the integration:
+
+[![Open your Home Assistant instance and start setting up a new integration.](https://my.home-assistant.io/badges/config_flow_start.svg)](https://my.home-assistant.io/redirect/config_flow_start/?domain=polestar_energy)
+
+Or manually: HACS → Integrations → ⋮ → **Custom repositories** → add `https://github.com/HairyDuck/polestar-energy` as **Integration**.
 
 ### Install manually
 
