@@ -2,7 +2,7 @@
 
 This is a custom component to get **Polestar Energy** charge-session information into [Home Assistant](https://home-assistant.io).
 
-Built by [LukeDev.co.uk](https://lukedev.co.uk/) / [HairyDuck](https://github.com/HairyDuck).
+Built by [HairyDuck](https://github.com/HairyDuck).
 
 Not affiliated with Polestar or Jedlix. Complementary to [pypolestar/polestar_api](https://github.com/pypolestar/polestar_api) (car data), not a replacement for it.
 

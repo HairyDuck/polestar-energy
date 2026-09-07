@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for helping improve this LukeDev / HairyDuck Home Assistant integration.
+Thanks for helping improve this HairyDuck Home Assistant integration.
 
 ## Development layout
 

@@ -3,7 +3,7 @@
     "step": {
       "user": {
         "title": "Polestar Energy",
-        "description": "Sign in with the same Polestar ID email and password you use in the Polestar Energy app (and Polestar API). No phone or redirect links needed.\n\nA LukeDev.co.uk / HairyDuck integration. Unofficial; not affiliated with Polestar or Jedlix.",
+        "description": "Sign in with the same Polestar ID email and password you use in the Polestar Energy app (and Polestar API). No phone or redirect links needed.\n\nA HairyDuck integration. Unofficial; not affiliated with Polestar or Jedlix.",
         "data": {
           "username": "Polestar ID email",
           "password": "Password",

@@ -16,7 +16,7 @@ For **custom-repository** install only, Actions are optional but still strongly 
 ```powershell
 cd polestar-energy
 gh auth login
-gh repo create HairyDuck/polestar-energy --public --source=. --remote=origin --push --description "Home Assistant integration for Polestar Energy charge sessions (LukeDev.co.uk / HairyDuck)"
+gh repo create HairyDuck/polestar-energy --public --source=. --remote=origin --push --description "Home Assistant integration for Polestar Energy charge sessions (HairyDuck). Unofficial."
 ```
 
 Or create `https://github.com/HairyDuck/polestar-energy` in the browser, then push `main`.

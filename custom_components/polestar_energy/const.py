@@ -22,7 +22,7 @@ AUTH_REDIRECT_URI = (
 
 API_KEY = "9cb19e6c885983102a4bc9e096acea8b"
 MOBILE_GATEWAY_BASE = "https://mobilegateway.jedlix.com/v1/api"
-CLIENT_NAME = "LukeDev-PolestarEnergy"
+CLIENT_NAME = "HairyDuck-PolestarEnergy"
 CLIENT_VERSION = "1.0.0"
 
 DEFAULT_SCAN_INTERVAL_SECONDS = 300

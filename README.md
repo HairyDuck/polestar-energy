@@ -2,7 +2,7 @@
 
 This application is not an official app affiliated with Polestar or Jedlix.
 
-A [LukeDev.co.uk](https://lukedev.co.uk/) / [HairyDuck](https://github.com/HairyDuck) Home Assistant integration for **Polestar Energy** charge sessions (energy used, session times, home vs away).
+A [HairyDuck](https://github.com/HairyDuck) Home Assistant integration for **Polestar Energy** charge sessions (energy used, session times, home vs away).
 
 This is **separate** from the car telemetry integration [pypolestar/polestar_api](https://github.com/pypolestar/polestar_api) (battery, location, odometer, and so on). Use that for the car. Use **this** for charge-session data from the Polestar Energy / Jedlix smart-charging app.
 
@@ -79,7 +79,7 @@ Clone or copy this repository and copy the folder `custom_components/polestar_en
 
 * Issues: https://github.com/HairyDuck/polestar-energy/issues
 * Contributions: see [CONTRIBUTING.md](CONTRIBUTING.md)
-* Author: [HairyDuck](https://github.com/HairyDuck) · [LukeDev.co.uk](https://lukedev.co.uk/)
+* Author: [HairyDuck](https://github.com/HairyDuck)
 
 ## License
 

@@ -1,12 +1,14 @@
 {
   "domain": "polestar_energy",
   "name": "Polestar Energy",
-  "codeowners": ["@HairyDuck"],
+  "codeowners": [
+    "@HairyDuck"
+  ],
   "config_flow": true,
   "dependencies": [],
   "documentation": "https://github.com/HairyDuck/polestar-energy",
   "iot_class": "cloud_polling",
   "issue_tracker": "https://github.com/HairyDuck/polestar-energy/issues",
   "requirements": [],
-  "version": "1.0.1"
+  "version": "1.0.2"
 }
