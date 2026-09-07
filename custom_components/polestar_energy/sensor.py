@@ -154,7 +154,7 @@ class PolestarEnergySensor(CoordinatorEntity[PolestarEnergyCoordinator], SensorE
         self._attr_device_info = {
             "identifiers": {(DOMAIN, coordinator.entry.entry_id)},
             "name": coordinator.entry.title,
-            "manufacturer": "Polestar / Jedlix",
+            "manufacturer": "LukeDev",
             "model": "Polestar Energy",
         }
 

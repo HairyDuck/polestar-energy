@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.1 – 2026-09-07
+
+- Use the Polestar Energy app orange icon for brand assets
+- Device manufacturer shown as LukeDev (unofficial; not Polestar / Jedlix)
+
 ## 1.0.0 – 2026-09-07
 
 - Initial public release (LukeDev.co.uk / HairyDuck)
