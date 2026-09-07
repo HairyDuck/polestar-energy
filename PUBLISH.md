@@ -28,12 +28,14 @@ Keep `custom_components/polestar_energy/manifest.json` → `version` in sync wit
 
 ## 3. Add to HACS (users)
 
-Until the integration is in the default HACS store, users add it as a **custom repository**:
+Same pattern as [pypolestar/polestar_api](https://github.com/pypolestar/polestar_api):
 
 1. HACS → Integrations → ⋮ → Custom repositories  
 2. URL: `https://github.com/HairyDuck/polestar-energy`  
 3. Category: Integration  
+4. Download **Polestar Energy**, restart, then add the integration in Settings  
 
+Until the integration is in the default HACS store, the custom-repository step is required.
 ## 4. Optional: default HACS store
 
 Submit to the HACS default repository process when the project is stable:

@@ -1,104 +1,58 @@
-# Polestar Energy for Home Assistant
+# Polestar Energy
 
-[![hacs](https://img.shields.io/badge/HACS-Custom-orange.svg)](https://hacs.xyz/)
-[![GitHub release](https://img.shields.io/github/v/release/HairyDuck/polestar-energy?include_prereleases)](https://github.com/HairyDuck/polestar-energy/releases)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2024.8%2B-blue.svg)](https://www.home-assistant.io/)
-[![LukeDev](https://img.shields.io/badge/LukeDev.co.uk-HairyDuck-111111.svg)](https://lukedev.co.uk/)
+This application is not an official app affiliated with Polestar or Jedlix.
 
-Unofficial Home Assistant integration for **Polestar Energy** charge sessions.
+A [LukeDev.co.uk](https://lukedev.co.uk/) / [HairyDuck](https://github.com/HairyDuck) Home Assistant integration for **Polestar Energy** charge sessions (energy used, session times, home vs away).
 
-Built by [LukeDev.co.uk](https://lukedev.co.uk/) / [HairyDuck](https://github.com/HairyDuck).
+This is **separate** from the car telemetry integration [pypolestar/polestar_api](https://github.com/pypolestar/polestar_api) (battery, location, odometer, and so on). Use that for the car. Use **this** for charge-session data from the Polestar Energy / Jedlix smart-charging app.
 
-> **Not affiliated with Polestar or Jedlix.** This uses the same consumer APIs as the Polestar Energy mobile app. The API can change without notice.
+N.B. Cost and savings values from the app are **indicative only**. Prefer your wallbox / electricity meter sensors for billing. The underlying API is unofficial and may change when the mobile app is updated.
 
-This is **not** the car telemetry integration ([pypolestar/polestar_api](https://github.com/pypolestar/polestar_api)). Use that for battery, location, and climate. Use **this** for charge-session history from the Polestar Energy / Jedlix smart-charging app.
+## Use your Polestar account
 
----
+Use the same Polestar ID you use in the Polestar Energy app on your phone. You can check login here: https://polestarid.eu.polestar.com/Account/login
+
+## Prerequisites
+
+* HACS (Home Assistant Community Store) must be installed. If you have not installed HACS yet, follow the [official HACS installation guide](https://hacs.xyz/docs/use/#getting-started-with-hacs).
+
+## Add in HA Integration
+
+### Custom repository (until listed in HACS by default)
+
+1. HACS → Integrations → ⋮ → **Custom repositories**
+2. Repository: `https://github.com/HairyDuck/polestar-energy`
+3. Category: **Integration**
+4. Download **Polestar Energy**
+5. Restart Home Assistant
+6. Settings → Devices & services → **Add integration** → **Polestar Energy**
+
+### Fill the information
+
+1. Open the login URL shown in the config flow
+2. Sign in with your Polestar ID
+3. After login, copy the full redirect URL that starts with `com.polestar.smartcharging://`
+4. Paste it into the Home Assistant form
+
+Tokens are stored in Home Assistant and refreshed automatically.
 
 ## What you get
 
-| Entity | Meaning |
-| --- | --- |
-| Last session energy | kWh from the most recent charge session |
-| Last session cost / savings | Figures from the app (indicative only) |
-| Last session start / end | Timestamps |
-| Last session location | Address / place name for that session |
-| Energy today / this month | Summed from session history |
-| Session active | A charge session is in progress |
-| Charging at home | An **active** session is at a configured home address |
+* Last session energy (kWh), start/end, location
+* Last session cost / savings from the app (indicative)
+* Energy today / this month from session history
+* Binary: session active
+* Binary: charging at home (active session at a configured home address)
 
-Recent sessions are also exposed as attributes on the last-session sensors (handy for dashboards and automations).
+## Manual install
 
-### Costs are not gospel
-
-App cost and savings values are useful for rough comparison, but treat your wallbox meter and energy tariff sensors as the source of truth for billing.
-
----
-
-## Install with HACS (recommended)
-
-1. Open **HACS** → **Integrations** → ⋮ → **Custom repositories**.
-2. Add:
-   - Repository: `https://github.com/HairyDuck/polestar-energy`
-   - Category: **Integration**
-3. Click **Add**, then find **Polestar Energy** and install it.
-4. Restart Home Assistant.
-5. Go to **Settings** → **Devices & services** → **Add integration** → **Polestar Energy**.
-
-### Manual install
-
-1. Copy `custom_components/polestar_energy` into your Home Assistant `config/custom_components/` folder.
-2. Restart Home Assistant.
-3. Add the integration as above.
-
----
-
-## Setup (Polestar ID login)
-
-The integration uses the same Polestar ID sign-in as the phone app (Auth0 + PKCE).
-
-1. When you add the integration, Home Assistant shows a **login URL**.
-2. Open that URL in a browser on your phone or computer.
-3. Sign in with the **same Polestar ID** used in the Polestar Energy app.
-4. After login, the browser tries to open an app link starting with:
-   `com.polestar.smartcharging://…`
-5. Copy that **full URL** from the address bar (or from the “open in app” prompt) and paste it into the Home Assistant form.
-6. Submit. Tokens are stored in your config entry and refreshed automatically.
-
-If login fails later, use **Reconfigure** / re-add and paste a fresh redirect URL.
-
----
-
-## Example uses
-
-- Track whether a session is **at home or away** (`binary_sensor.polestar_energy_charging_at_home` while a session is active).
-- Drive automations when a session starts or finishes.
-- Cross-check session kWh against your home charger energy sensors.
-- Show last session location on a dashboard card.
-
----
-
-## Requirements
-
-- Home Assistant **2024.8** or newer
-- A Polestar Energy account (Jedlix-backed) that already works in the mobile app
-- Outbound HTTPS to:
-  - `jedlix-b2b.eu.auth0.com`
-  - `polestarid.eu.polestar.com` (during login)
-  - `mobilegateway.jedlix.com`
-
----
+Clone or copy this repository and copy the folder `custom_components/polestar_energy` into your Home Assistant `custom_components` directory, then restart and add the integration as above.
 
 ## Support
 
-- Issues: [GitHub Issues](https://github.com/HairyDuck/polestar-energy/issues)
-- Author: [HairyDuck](https://github.com/HairyDuck) · [LukeDev.co.uk](https://lukedev.co.uk/)
+* Issues: https://github.com/HairyDuck/polestar-energy/issues
+* Author: [HairyDuck](https://github.com/HairyDuck) · [LukeDev.co.uk](https://lukedev.co.uk/)
 
-Contributions welcome. See [CONTRIBUTING.md](CONTRIBUTING.md).
+## License
 
----
-
-## Disclaimer
-
-This project is unofficial and open source under the [MIT License](LICENSE). Polestar, Jedlix, and related marks belong to their respective owners. Use at your own risk; cloud APIs may break when the app is updated.
+MIT – see [LICENSE](LICENSE).

@@ -3,10 +3,10 @@
   "name": "Polestar Energy",
   "codeowners": ["@HairyDuck"],
   "config_flow": true,
+  "dependencies": [],
   "documentation": "https://github.com/HairyDuck/polestar-energy",
-  "issue_tracker": "https://github.com/HairyDuck/polestar-energy/issues",
   "iot_class": "cloud_polling",
-  "loggers": ["custom_components.polestar_energy"],
+  "issue_tracker": "https://github.com/HairyDuck/polestar-energy/issues",
   "requirements": [],
   "version": "1.0.0"
 }

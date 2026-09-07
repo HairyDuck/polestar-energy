@@ -1,7 +1,5 @@
 {
   "name": "Polestar Energy",
-  "render_readme": true,
   "homeassistant": "2024.8.0",
-  "hacs": "2.0.0",
-  "country": ["GB", "SE", "NO", "NL", "DE", "BE", "AT", "CH", "DK", "FI"]
+  "render_readme": true
 }
