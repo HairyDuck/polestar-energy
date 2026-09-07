@@ -8,6 +8,22 @@ This is **separate** from the car telemetry integration [pypolestar/polestar_api
 
 N.B. Cost and savings values from the app are **indicative only**. Prefer your wallbox / electricity meter sensors for billing. The underlying API is unofficial and may change when the mobile app is updated.
 
+## Screenshots
+
+### Setup
+
+Paste the Polestar ID redirect URL after signing in:
+
+![Polestar Energy setup](images/setup.png)
+
+### Result
+
+![Polestar Energy result card](images/result.png)
+
+### Entities
+
+![Polestar Energy entities](images/entities.png)
+
 ## Use your Polestar account
 
 Use the same Polestar ID you use in the Polestar Energy app on your phone. You can check login here: https://polestarid.eu.polestar.com/Account/login
