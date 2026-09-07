@@ -8,13 +8,19 @@ This is **separate** from the car telemetry integration [pypolestar/polestar_api
 
 N.B. Cost and savings values from the app are **indicative only**. Prefer your wallbox / electricity meter sensors for billing. The underlying API is unofficial and may change when the mobile app is updated.
 
+This integration is brand new, so time will tell how it holds up as Polestar / Jedlix change things. Issues, pull requests, and testing help are very welcome; please feel free to chip in.
+
 ## Screenshots
 
 ### Setup
 
-Paste the Polestar ID redirect URL after signing in:
+Enter your Polestar ID email and password:
 
 ![Polestar Energy setup](images/setup.png)
+
+### Device
+
+![Polestar Energy device](images/device.png)
 
 ### Result
 
@@ -26,13 +32,15 @@ Paste the Polestar ID redirect URL after signing in:
 
 ## Use your Polestar account
 
-Use the same Polestar ID you use in the Polestar Energy app on your phone. You can check login here: https://polestarid.eu.polestar.com/Account/login
+Use the same Polestar ID email and password you use in the Polestar Energy app (and in [Polestar API](https://github.com/pypolestar/polestar_api)). You can check login here: https://polestarid.eu.polestar.com/Account/login
 
 ## Prerequisites
 
 * HACS (Home Assistant Community Store) must be installed. If you have not installed HACS yet, follow the [official HACS installation guide](https://hacs.xyz/docs/use/#getting-started-with-hacs).
 
 ## Add in HA Integration
+
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=HairyDuck&repository=polestar-energy&category=integration)
 
 ### Custom repository (until listed in HACS by default)
 
@@ -45,12 +53,9 @@ Use the same Polestar ID you use in the Polestar Energy app on your phone. You c
 
 ### Fill the information
 
-1. Open the login URL shown in the config flow
-2. Sign in with your Polestar ID
-3. After login, copy the full redirect URL that starts with `com.polestar.smartcharging://`
-4. Paste it into the Home Assistant form
+Enter your **Polestar ID email** and **password**. Home Assistant signs in for you; no phone, USB cable, or copying redirect links.
 
-Tokens are stored in Home Assistant and refreshed automatically.
+Only OAuth tokens are stored afterwards (not your password). Tokens refresh automatically.
 
 ## What you get
 
@@ -67,6 +72,7 @@ Clone or copy this repository and copy the folder `custom_components/polestar_en
 ## Support
 
 * Issues: https://github.com/HairyDuck/polestar-energy/issues
+* Contributions: see [CONTRIBUTING.md](CONTRIBUTING.md)
 * Author: [HairyDuck](https://github.com/HairyDuck) · [LukeDev.co.uk](https://lukedev.co.uk/)
 
 ## License

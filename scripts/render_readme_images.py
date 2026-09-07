@@ -150,17 +150,18 @@ def build_setup_html() -> str:
 <body><div class="wrap"><div class="dialog"><div class="bar"></div>
   <div class="body">
     <h1>Polestar Energy</h1>
-    <p>Sign in with the same Polestar ID you use in the Polestar Energy app.</p>
-    <ol>
-      <li>Open the login URL shown by Home Assistant</li>
-      <li>Sign in at Polestar ID</li>
-      <li>Copy the redirect URL starting with <code>com.polestar.smartcharging://</code></li>
-      <li>Paste it below</li>
-    </ol>
+    <p>Sign in with the same Polestar ID email and password you use in the Polestar Energy app. No phone or redirect links needed.</p>
     <div class="field">
-      <div class="label">Redirect URL from the browser</div>
-      <div class="input">com.polestar.smartcharging://jedlix-b2b.eu.auth0.com/.../callback?code=…</div>
-      <div class="hint">Optional: advanced users can paste a refresh token instead</div>
+      <div class="label">Polestar ID email</div>
+      <div class="input">you@example.com</div>
+    </div>
+    <div class="field" style="margin-top:18px">
+      <div class="label">Password</div>
+      <div class="input">••••••••••••</div>
+    </div>
+    <div class="field" style="margin-top:18px">
+      <div class="label">Name</div>
+      <div class="input">Polestar Energy</div>
     </div>
   </div>
   <div class="actions">
@@ -185,8 +186,10 @@ async def render(html: str, filename: str, width: int = 900, height: int = 900) 
 
 
 async def main() -> None:
+    await render(build_setup_html(), "setup.png", width=800, height=700)
     if not TOKEN:
-        raise SystemExit("Set HA_TOKEN to a Home Assistant long-lived access token")
+        print("HA_TOKEN not set; skipped entities.png / result.png")
+        return
     states = []
     for eid in ENTITY_IDS:
         try:
@@ -194,7 +197,6 @@ async def main() -> None:
         except Exception as err:
             print("skip", eid, err)
     await render(build_entities_html(states), "entities.png", height=1100)
-    await render(build_setup_html(), "setup.png", width=800, height=700)
 
     # Compact "result" card: key sensors only
     key_ids = {

@@ -3,8 +3,10 @@
 ## 1.0.0 – 2026-09-07
 
 - Initial public release (LukeDev.co.uk / HairyDuck)
-- Auth0 PKCE login with Polestar ID (paste redirect URL)
+- Auth0 PKCE login via Polestar ID email and password
 - Session history from Jedlix mobile gateway (`/sessions`, `/addresses`, `/vehicles`)
 - Sensors: last session energy/cost/savings/start/end/location, energy today/month
 - Binary sensors: session active, charging at home (active home session only)
+- Config flow: Polestar ID email + password (no redirect paste / phone required)
 - Config flow reauth support
+- HACS-ready: `hacs.json`, brand icons under `brand/`, hassfest + HACS GitHub Actions

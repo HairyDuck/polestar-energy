@@ -3,21 +3,29 @@
     "step": {
       "user": {
         "title": "Polestar Energy",
-        "description": "Sign in with the same Polestar ID you use in the Polestar Energy app.\n\n1. Open this link:\n\n{authorize_url}\n\n2. After login, your browser will try to open an app URL starting with `com.polestar.smartcharging://`.\n3. Copy that full URL and paste it below.\n\nA LukeDev.co.uk / HairyDuck integration. Unofficial; not affiliated with Polestar or Jedlix.",
+        "description": "Sign in with the same Polestar ID email and password you use in the Polestar Energy app (and Polestar API). No phone or redirect links needed.\n\nA LukeDev.co.uk / HairyDuck integration. Unofficial; not affiliated with Polestar or Jedlix.",
         "data": {
-          "redirect_url": "Redirect URL from the browser",
-          "refresh_token": "Refresh token (optional advanced)",
+          "username": "Polestar ID email",
+          "password": "Password",
           "name": "Name"
+        }
+      },
+      "reauth_confirm": {
+        "title": "Re-authenticate Polestar Energy",
+        "description": "Your Polestar Energy session expired. Enter your Polestar ID email and password again.",
+        "data": {
+          "username": "Polestar ID email",
+          "password": "Password"
         }
       }
     },
     "error": {
-      "invalid_redirect": "Could not find an authorisation code in that URL. Paste the full com.polestar.smartcharging:// link.",
-      "auth_failed": "Sign-in failed or the token was rejected. Try the login link again.",
+      "auth_failed": "Sign-in failed. Check your Polestar ID email and password.",
       "cannot_connect": "Signed in, but charge sessions could not be loaded. Check your Polestar Energy account and try again."
     },
     "abort": {
-      "already_configured": "This Polestar Energy account is already set up"
+      "already_configured": "This Polestar Energy account is already set up",
+      "reauth_successful": "Re-authentication successful"
     }
   }
 }
